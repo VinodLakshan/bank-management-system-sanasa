@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="RecieptLoan" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="c4107909-be33-44ef-899f-1dd05b56f98c">
+	<property name="ireport.zoom" value="1.1000000000000005"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="AID" class="java.lang.String"/>
+	<parameter name="Name" class="java.lang.String"/>
+	<parameter name="amount" class="java.lang.String"/>
+	<parameter name="amountInWords" class="java.lang.String"/>
+	<parameter name="CID" class="java.lang.String"/>
+	<group name="Group1">
+		<groupHeader>
+			<band height="3"/>
+		</groupHeader>
+		<groupFooter>
+			<band/>
+		</groupFooter>
+	</group>
+	<group name="Group2">
+		<groupHeader>
+			<band height="2"/>
+		</groupHeader>
+		<groupFooter>
+			<band/>
+		</groupFooter>
+	</group>
+	<group name="Group3">
+		<groupHeader>
+			<band height="3"/>
+		</groupHeader>
+		<groupFooter>
+			<band/>
+		</groupFooter>
+	</group>
+	<group name="Group4">
+		<groupHeader>
+			<band height="2"/>
+		</groupHeader>
+		<groupFooter>
+			<band/>
+		</groupFooter>
+	</group>
+	<background>
+		<band/>
+	</background>
+	<title>
+		<band height="72">
+			<frame>
+				<reportElement mode="Opaque" x="-19" y="-20" width="822" height="92" backcolor="#006699" uuid="d632df13-34c2-4501-964e-d7b16520b3bd"/>
+				<staticText>
+					<reportElement x="20" y="20" width="234" height="43" forecolor="#FFFFFF" uuid="6fa9d863-860a-4180-b050-53eb960fc5fc"/>
+					<textElement>
+						<font size="34" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Payment Bill]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="552" y="20" width="251" height="43" forecolor="#FFFFFF" uuid="d6bdb133-1812-4198-82ea-4b92d71001fe"/>
+					<textElement textAlignment="Right">
+						<font size="18" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Midigama SANASA Bank]]></text>
+				</staticText>
+			</frame>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="2"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="3"/>
+	</columnHeader>
+	<detail>
+		<band height="398">
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement x="570" y="0" width="232" height="33" uuid="9a7ed62a-10a8-4465-a0d9-7e14c7a63282"/>
+				<textElement>
+					<font size="18" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="2" y="91" width="150" height="43" uuid="1befd11d-6bc4-490a-9e6a-43d715402879"/>
+				<textElement>
+					<font size="24" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Account ID]]></text>
+			</staticText>
+			<line>
+				<reportElement x="2" y="37" width="800" height="1" uuid="ddb7d969-ce2f-4d60-8f21-4b6f0d696363"/>
+			</line>
+			<staticText>
+				<reportElement x="2" y="134" width="213" height="43" uuid="21334688-4433-475b-a9db-001d86bf6329"/>
+				<textElement>
+					<font size="24" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Account Hoder]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="2" y="177" width="120" height="43" uuid="6fcb0e5c-b642-4788-a11e-9d6ca3f885ae"/>
+				<textElement>
+					<font size="24" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Amount]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="2" y="48" width="233" height="43" uuid="b6db3c69-03c1-46e8-878f-6b6ddcbbeae0"/>
+				<textElement>
+					<font size="24" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Account Holder ID]]></text>
+			</staticText>
+			<line>
+				<reportElement x="3" y="263" width="800" height="1" uuid="662e0a13-fb06-4cda-be58-b539560af011"/>
+			</line>
+			<staticText>
+				<reportElement x="246" y="220" width="14" height="43" uuid="472ba2cc-40d7-4b54-8b12-6f16c79ae576"/>
+				<textElement>
+					<font size="24" isBold="true"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="246" y="48" width="14" height="43" uuid="519475fc-e853-4cd0-b62c-cd82bb936c45"/>
+				<textElement>
+					<font size="24" isBold="true"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="246" y="177" width="14" height="43" uuid="a5f8de6b-f96c-4ba9-b960-7f53d6c236d5"/>
+				<textElement>
+					<font size="24" isBold="true"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="246" y="134" width="14" height="43" uuid="930cab83-8ab9-460e-8e90-768b5a46c2e5"/>
+				<textElement>
+					<font size="24" isBold="true"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="246" y="91" width="14" height="43" uuid="88d3ba82-d87b-478a-bc64-ce40beae26aa"/>
+				<textElement>
+					<font size="24" isBold="true"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="557" y="337" width="111" height="43" uuid="ea2612e3-75c5-439c-8334-a16cc05ef403"/>
+				<textElement>
+					<font size="24" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Manager]]></text>
+			</staticText>
+			<line>
+				<reportElement x="413" y="336" width="389" height="1" uuid="5cdd78dc-243d-4e6d-8b1c-5a45656d558b"/>
+			</line>
+			<staticText>
+				<reportElement x="3" y="220" width="212" height="43" uuid="f0aa3e3e-86da-4a59-97a0-8dc340dc0086"/>
+				<textElement>
+					<font size="24" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Amount in Words]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="260" y="48" width="347" height="43" uuid="88c7d1b2-beb6-45ac-8bc0-0ca5b44c3d52"/>
+				<textElement>
+					<font size="24"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{CID}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="260" y="91" width="347" height="43" uuid="0e5fcea9-bc1d-4721-8a70-e59616a9fec0"/>
+				<textElement>
+					<font size="24"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{AID}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="260" y="134" width="347" height="43" uuid="d9d3b9a6-dc2a-40ad-a464-426fb00f4d1e"/>
+				<textElement>
+					<font size="24"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{Name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="260" y="177" width="347" height="43" uuid="a6f8d16c-de39-4fbd-96fc-748f32583523"/>
+				<textElement>
+					<font size="24"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{amount}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="260" y="220" width="347" height="43" uuid="4cc8e7cd-08fa-4ca5-858d-1539e52551d0"/>
+				<textElement>
+					<font size="24"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{amountInWords}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band/>
+	</columnFooter>
+	<pageFooter>
+		<band height="2"/>
+	</pageFooter>
+	<summary>
+		<band/>
+	</summary>
+</jasperReport>

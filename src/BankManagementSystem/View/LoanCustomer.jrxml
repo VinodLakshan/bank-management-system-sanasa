@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="RecieptLoan" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="c4107909-be33-44ef-899f-1dd05b56f98c">
+	<property name="ireport.zoom" value="1.3310000000000024"/>
+	<property name="ireport.x" value="106"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="AID" class="java.lang.String"/>
+	<parameter name="Name" class="java.lang.String"/>
+	<parameter name="amount" class="java.lang.String"/>
+	<parameter name="amountInWords" class="java.lang.String"/>
+	<parameter name="CID" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[select * from loan l,account a,customer c where a.AID=l.AID and a.CID=c.CID group by a.CID;]]>
+	</queryString>
+	<field name="LID" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="AID" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="reason" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="loanType" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Period" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="date" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="amount" class="java.math.BigDecimal">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Periodical" class="java.math.BigDecimal">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="toBePaid" class="java.math.BigDecimal">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="CID" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="accountType" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="GuardianName" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="balance" class="java.math.BigDecimal">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="fName" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="lName" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="dateOfBirth" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="age" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="gender" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="address" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="occupation" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="NIC" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="mobileNo" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<group name="Group1">
+		<groupHeader>
+			<band height="3"/>
+		</groupHeader>
+		<groupFooter>
+			<band/>
+		</groupFooter>
+	</group>
+	<group name="Group2">
+		<groupHeader>
+			<band height="2"/>
+		</groupHeader>
+		<groupFooter>
+			<band/>
+		</groupFooter>
+	</group>
+	<group name="Group3">
+		<groupHeader>
+			<band height="3"/>
+		</groupHeader>
+		<groupFooter>
+			<band/>
+		</groupFooter>
+	</group>
+	<group name="Group4">
+		<groupHeader>
+			<band height="96">
+				<line>
+					<reportElement x="1" y="49" width="801" height="1" uuid="ddb7d969-ce2f-4d60-8f21-4b6f0d696363"/>
+				</line>
+				<textField pattern="EEEEE dd MMMMM yyyy">
+					<reportElement x="571" y="0" width="232" height="33" uuid="9a7ed62a-10a8-4465-a0d9-7e14c7a63282"/>
+					<textElement>
+						<font size="18" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="1" y="76" width="53" height="20" uuid="265bd0cc-ce95-4af0-9d65-f18c7ac8a160"/>
+					<textElement>
+						<font size="12" isBold="true"/>
+					</textElement>
+					<text><![CDATA[CID]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="86" y="76" width="100" height="20" uuid="b259d01a-b75d-4da3-a4fb-56d7b9847cfd"/>
+					<textElement>
+						<font size="12" isBold="true"/>
+					</textElement>
+					<text><![CDATA[First Name]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="218" y="76" width="100" height="20" uuid="415732a3-e01b-49e6-960f-7718b453f3a4"/>
+					<textElement>
+						<font size="12" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Last Name]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="357" y="76" width="56" height="20" uuid="da567c27-9fb2-4020-8e6c-9b925a370bde"/>
+					<textElement>
+						<font size="12" isBold="true"/>
+					</textElement>
+					<text><![CDATA[age]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="571" y="76" width="100" height="20" uuid="e422b338-3a14-4cc5-b9ca-61a4dff8d188"/>
+					<textElement>
+						<font size="12" isBold="true"/>
+					</textElement>
+					<text><![CDATA[address]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="447" y="76" width="100" height="20" uuid="29ce129b-7ff9-4fab-b485-88b94544b22e"/>
+					<textElement>
+						<font size="12" isBold="true"/>
+					</textElement>
+					<text><![CDATA[NIC]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="702" y="76" width="100" height="20" uuid="a230315e-ace7-49a6-801f-e5ef88aa2345"/>
+					<textElement>
+						<font size="12" isBold="true"/>
+					</textElement>
+					<text><![CDATA[mobileNo]]></text>
+				</staticText>
+			</band>
+		</groupHeader>
+		<groupFooter>
+			<band/>
+		</groupFooter>
+	</group>
+	<background>
+		<band/>
+	</background>
+	<title>
+		<band height="72">
+			<frame>
+				<reportElement mode="Opaque" x="-19" y="-20" width="822" height="92" backcolor="#006699" uuid="d632df13-34c2-4501-964e-d7b16520b3bd"/>
+				<staticText>
+					<reportElement x="20" y="20" width="280" height="43" forecolor="#FFFFFF" uuid="6fa9d863-860a-4180-b050-53eb960fc5fc"/>
+					<textElement>
+						<font size="34" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Loan Customers]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="552" y="20" width="251" height="43" forecolor="#FFFFFF" uuid="d6bdb133-1812-4198-82ea-4b92d71001fe"/>
+					<textElement textAlignment="Right">
+						<font size="18" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Midigama SANASA Bank]]></text>
+				</staticText>
+			</frame>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="2"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="3"/>
+	</columnHeader>
+	<detail>
+		<band height="44">
+			<textField>
+				<reportElement x="1" y="14" width="53" height="20" uuid="bc7927bd-50b0-46f9-a98a-14fce307dd80"/>
+				<textFieldExpression><![CDATA[$F{CID}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="86" y="14" width="100" height="20" uuid="229a84b2-06b4-49a1-b46c-61ca21c8d047"/>
+				<textFieldExpression><![CDATA[$F{fName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="218" y="14" width="100" height="20" uuid="0bcb5e99-35b8-4e69-9d58-acced26eb04d"/>
+				<textFieldExpression><![CDATA[$F{lName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="357" y="14" width="56" height="20" uuid="e08d44a6-90cf-4951-85c9-daf09f0516f2"/>
+				<textFieldExpression><![CDATA[$F{age}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="447" y="14" width="100" height="20" uuid="768baebb-bcc5-4971-8faa-d663e9617fd3"/>
+				<textFieldExpression><![CDATA[$F{NIC}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="571" y="14" width="100" height="20" uuid="18572083-ed3d-41f4-bab3-7d63c942b544"/>
+				<textFieldExpression><![CDATA[$F{address}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="702" y="14" width="100" height="20" uuid="40601c1d-598f-44f3-8496-c30b6228658f"/>
+				<textFieldExpression><![CDATA[$F{mobileNo}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band/>
+	</columnFooter>
+	<pageFooter>
+		<band height="2"/>
+	</pageFooter>
+	<summary>
+		<band/>
+	</summary>
+</jasperReport>
